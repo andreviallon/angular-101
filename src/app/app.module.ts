@@ -2,7 +2,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule } from '@angular/forms';
 import { NgModule } from '@angular/core';
 
-
+import { SummaryPipe } from './summary.pipe';
 import { AppComponent } from './app.component';
 import { CoursesComponent } from './courses.component';
 import { CourseComponent } from './course/course.component';
@@ -25,7 +25,8 @@ import { CarsService } from './cars.service';
     AuthorComponent,
     PersonComponent,
     FilmComponent,
-    CarComponent
+    CarComponent,
+    SummaryPipe
   ],
   imports: [
     BrowserModule,
