@@ -1,5 +1,5 @@
-<p>
-  course works!
-</p>
-
-<button></button>
+{{ course.title | uppercase }}
+<br /> {{ course.students | number }}
+<br /> {{ course.rating | number:'1.2-2' }}
+<br /> {{ course.price | currency:'EUR':true }}
+<br /> {{ course.releaseDate | date:'shortDate' }}
