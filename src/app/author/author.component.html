@@ -1,0 +1,18 @@
+<h2>There are: {{ authors.length }} authors</h2>
+<ul>
+  <li *ngFor="let author of authors">
+    {{ author }}
+  </li>
+</ul>
+<!-- Class binding-->
+<button class="btn btn-primary" [class.active]='isActive'>Save</button>
+
+<!-- Style binding-->
+<button class="btn" [style.backgroundColor]="isActive ? 'blue' : 'white'">Save</button>
+
+<!-- Event binding-->
+<div (click)="onDivClick()">
+  <button class="btn btn-primary" (click)="onSave($event)">Save</button>
+</div>
+
+<input (keyUp.enter)="onKeyUp()" />
