@@ -21,8 +21,9 @@ export class AuthorComponent implements OnInit {
     console.log('div was clicked');
   }
 
-  onKeyUp() {
-    console.log('ENTER was pressed');
+  // get email variable created in the HTML
+  onKeyUp(email) {
+    console.log(email);
   }
 
   constructor(service: AuthorsService) {

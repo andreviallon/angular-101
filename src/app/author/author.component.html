@@ -15,4 +15,6 @@
   <button class="btn btn-primary" (click)="onSave($event)">Save</button>
 </div>
 
-<input (keyUp.enter)="onKeyUp()" />
+<!-- #email is a template variable and it references this input field
+     passe the value in the onKeyUp method-->
+<input #email (keyUp.enter)="onKeyUp(email.value)" />
