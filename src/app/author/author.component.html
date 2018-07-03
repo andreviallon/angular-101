@@ -15,6 +15,6 @@
   <button class="btn btn-primary" (click)="onSave($event)">Save</button>
 </div>
 
-<!-- #email is a template variable and it references this input field
-     passe the value in the onKeyUp method-->
-<input #email (keyUp.enter)="onKeyUp(email.value)" />
+<!-- [()] => two way binding syntax
+    ngModel is an Angular directive used to implement two way binding-->
+<input [(ngModel)]="email" (keyUp.enter)="onKeyUp()" />

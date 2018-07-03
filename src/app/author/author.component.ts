@@ -8,6 +8,7 @@ import { AuthorsService } from '../authors.service';
 })
 export class AuthorComponent implements OnInit {
   authors;
+  email = 'me@example.com';
   // Class binding
   isActive = true;
 
@@ -21,9 +22,8 @@ export class AuthorComponent implements OnInit {
     console.log('div was clicked');
   }
 
-  // get email variable created in the HTML
-  onKeyUp(email) {
-    console.log(email);
+  onKeyUp() {
+    console.log(this.email);
   }
 
   constructor(service: AuthorsService) {
