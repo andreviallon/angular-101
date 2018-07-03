@@ -10,7 +10,7 @@ export class SummaryPipe implements PipeTransform {
     if (!value) {
       return null;
     }
-    let actaulLimit = (limit) ? limit : 50;
+    const actaulLimit = (limit) ? limit : 50;
     // Returns the first 50 characters of a string where the summary pipe is used
     return value.substr(0, actaulLimit) + '...';
   }

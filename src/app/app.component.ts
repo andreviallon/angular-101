@@ -6,7 +6,5 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  // 2 ways of doing 1 way property binding
-  title = 'Angular app';
-  title2 = 'I\'m an app';
+  title: string;
 }

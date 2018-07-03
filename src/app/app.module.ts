@@ -15,6 +15,7 @@ import { FilmComponent } from './film/film.component';
 import { FilmService } from './film.service';
 import { CarComponent } from './car/car.component';
 import { CarsService } from './cars.service';
+import { TitleCasePipe } from './title-case.pipe';
 
 
 @NgModule({
@@ -26,7 +27,8 @@ import { CarsService } from './cars.service';
     PersonComponent,
     FilmComponent,
     CarComponent,
-    SummaryPipe
+    SummaryPipe,
+    TitleCasePipe
   ],
   imports: [
     BrowserModule,
