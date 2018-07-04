@@ -1,4 +1,4 @@
-<h3>Angular</h3>
+<!-- <h3>Angular</h3>
 <input type="text" [(ngModel)]="title" />
 <br/> {{ title | titleCase }}
 <br/>
@@ -10,4 +10,5 @@
 </app-panel>
 <app-course></app-course>
 <app-author></app-author>
-<app-person></app-person>
+<app-person></app-person> -->
+<app-like [tweet]="tweet.body" [likesCount]="tweet.likesCount" [isActive]="tweet.isActive"></app-like>
