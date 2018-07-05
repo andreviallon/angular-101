@@ -27,7 +27,7 @@
 </ng-template>
 <br/> -->
 
-<h4>*ngSwitch</h4>
+<!-- <h4>*ngSwitch</h4>
 <ul class="nav nav-pills">
   <li class="nav-item">
     <a class="nav-link" [class.active]="viewMode == 'map'" (click)="viewMode = 'map'">Map View</a>
@@ -41,4 +41,12 @@
   <div *ngSwitchCase="'map'">Map View Content</div>
   <div *ngSwitchCase="'list'">List View Content</div>
   <div *ngSwitchDefault>Default View</div>
-</div>
+</div> -->
+
+<h4>*ngFor</h4>
+<ul>
+  <li *ngFor="let course of courses; index as i; even as isEven">
+    {{ i }} - {{ course.name }}
+    <span *ngIf="isEven">This row is even</span>
+  </li>
+</ul>

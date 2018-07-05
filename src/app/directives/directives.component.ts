@@ -6,7 +6,11 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./directives.component.css']
 })
 export class DirectivesComponent implements OnInit {
-  courses = ['course 1', 'course 2'];
+  courses = [
+    { id: 1, name: 'couse 1 ' },
+    { id: 2, name: 'couse 2 ' },
+    { id: 3, name: 'couse 3 ' }
+  ];
 
   viewMode = 'map';
 
