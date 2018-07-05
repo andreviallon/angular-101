@@ -6,11 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./directives.component.css']
 })
 export class DirectivesComponent implements OnInit {
-  courses = [
-    { id: 1, name: 'course 1 ' },
-    { id: 2, name: 'course 2 ' },
-    { id: 3, name: 'course 3 ' }
-  ];
+  courses;
 
   viewMode = 'map';
 
@@ -21,6 +17,18 @@ export class DirectivesComponent implements OnInit {
   onRemove(course) {
     const index = this.courses.indexOf(course);
     this.courses.splice(index, 1);
+  }
+
+  loadCourses() {
+    this.courses = [
+      { id: 1, name: 'course 1 ' },
+      { id: 2, name: 'course 2 ' },
+      { id: 3, name: 'course 3 ' }
+    ];
+  }
+
+  trackCourse(index, course) {
+    return course ? course.id : undefined;
   }
 
   constructor() { }
