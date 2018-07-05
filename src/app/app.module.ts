@@ -18,6 +18,7 @@ import { CarsService } from './cars.service';
 import { TitleCasePipe } from './title-case.pipe';
 import { PanelComponent } from './panel/panel.component';
 import { LikeComponent } from './like/like.component';
+import { DirectivesComponent } from './directives/directives.component';
 
 
 @NgModule({
@@ -32,7 +33,8 @@ import { LikeComponent } from './like/like.component';
     SummaryPipe,
     TitleCasePipe,
     PanelComponent,
-    LikeComponent
+    LikeComponent,
+    DirectivesComponent
   ],
   imports: [
     BrowserModule,
