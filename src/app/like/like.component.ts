@@ -10,9 +10,14 @@ export class LikeComponent implements OnInit {
   @Input() likesCount: number;
   @Input() isActive: boolean;
 
-  onClick() {
+  onDivClick() {
+    console.log('div was clicked');
+  }
+
+  onClick($event) {
     this.likesCount += (this.isActive) ? -1 : 1;
     this.isActive = !this.isActive;
+    $event.stopPropagation();
   }
 
   constructor() { }

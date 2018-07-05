@@ -1,6 +1,7 @@
 <p>{{ tweet }}</p>
 
-<span class="button btn btn-secondary" [class.is-active]="isActive" (click)="onClick()">Like
-</span>
+<div (click)="onDivClick()">
+  <span class="button btn btn-secondary" [class.is-active]="isActive" (click)="onClick($event)">Like</span>
+</div>
 
 <span> {{ likesCount }}</span>
