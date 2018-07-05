@@ -59,10 +59,14 @@
    'fa-star-o': !isActive
 }"></i> -->
 
-<button [ngStyle]="{
+<!-- ngStyle -->
+<!-- <button [ngStyle]="{
   'backgroundColor': canSave ? 'blue' : grey,
   'color': canSave ? 'white' : black,
   'fontWeight': canSave ? 'bold' : normal
 }">
   Save
-</button>
+</button> -->
+
+<!-- Safe traversal operator -->
+<span>{{ task.assignee?.name }}</span>

@@ -10,6 +10,13 @@ export class DirectivesComponent implements OnInit {
   viewMode = 'map';
   canSave = true;
 
+  task = {
+    title: 'Review applications',
+    assignee: {
+      name: 'John Smith'
+    }
+  };
+
   onAdd() {
     this.courses.push({ id: 4, name: 'course 4' });
   }
