@@ -7,8 +7,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class DirectivesComponent implements OnInit {
   courses;
-
   viewMode = 'map';
+  canSave = true;
 
   onAdd() {
     this.courses.push({ id: 4, name: 'course 4' });

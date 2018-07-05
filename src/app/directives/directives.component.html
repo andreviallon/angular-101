@@ -54,7 +54,15 @@
 </ul> -->
 
 <!-- ngClass -->
-<i class="fa fa-lg" [ngClass]="{
+<!-- <i class="fa fa-lg" [ngClass]="{
   'fa-star': isActive,
    'fa-star-o': !isActive
-}"></i>
+}"></i> -->
+
+<button [ngStyle]="{
+  'backgroundColor': canSave ? 'blue' : grey,
+  'color': canSave ? 'white' : black,
+  'fontWeight': canSave ? 'bold' : normal
+}">
+  Save
+</button>
