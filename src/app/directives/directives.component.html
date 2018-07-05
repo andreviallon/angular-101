@@ -43,7 +43,7 @@
   <div *ngSwitchDefault>Default View</div>
 </div> -->
 
-<h4>*ngFor</h4>
+<!-- <h4>*ngFor</h4>
 <button class="btn btn-primary" (click)="loadCourses()">Load Courses</button>
 <button class="btn btn-primary" (click)="onAdd()">Add</button>
 <ul>
@@ -51,4 +51,10 @@
     {{ course.name }}
     <button class="btn" (click)="onRemove(course)">Remove</button>
   </li>
-</ul>
+</ul> -->
+
+<!-- ngClass -->
+<i class="fa fa-lg" [ngClass]="{
+  'fa-star': isActive,
+   'fa-star-o': !isActive
+}"></i>
