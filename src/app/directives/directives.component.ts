@@ -8,6 +8,8 @@ import { Component, OnInit } from '@angular/core';
 export class DirectivesComponent implements OnInit {
   courses = ['course 1', 'course 2'];
 
+  viewMode = 'map';
+
   constructor() { }
 
   ngOnInit() {
