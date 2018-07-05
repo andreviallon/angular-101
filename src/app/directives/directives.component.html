@@ -44,9 +44,10 @@
 </div> -->
 
 <h4>*ngFor</h4>
+<button class="btn btn-primary" (click)="onAdd()">Add</button>
 <ul>
-  <li *ngFor="let course of courses; index as i; even as isEven">
-    {{ i }} - {{ course.name }}
-    <span *ngIf="isEven">This row is even</span>
+  <li *ngFor="let course of courses">
+    {{ course.name }}
+    <button class="btn" (click)="onRemove(course)">Remove</button>
   </li>
 </ul>
