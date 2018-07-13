@@ -19,6 +19,7 @@ import { TitleCasePipe } from './title-case.pipe';
 import { PanelComponent } from './panel/panel.component';
 import { LikeComponent } from './like/like.component';
 import { DirectivesComponent } from './directives/directives.component';
+import { InputFormatDirective } from './input-format.directive';
 
 
 @NgModule({
@@ -34,7 +35,8 @@ import { DirectivesComponent } from './directives/directives.component';
     TitleCasePipe,
     PanelComponent,
     LikeComponent,
-    DirectivesComponent
+    DirectivesComponent,
+    InputFormatDirective
   ],
   imports: [
     BrowserModule,
