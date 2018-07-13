@@ -6,6 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./directives.component.css']
 })
 export class DirectivesComponent implements OnInit {
+  movies = ['Pulp Fiction', 'Django Unchained'];
   courses;
   viewMode = 'map';
   canSave = true;

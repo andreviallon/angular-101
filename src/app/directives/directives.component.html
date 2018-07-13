@@ -27,7 +27,7 @@
 </ng-template>
 <br/> -->
 
-<!-- <h4>*ngSwitch</h4>
+<h4>*ngSwitch</h4>
 <ul class="nav nav-pills">
   <li class="nav-item">
     <a class="nav-link" [class.active]="viewMode == 'map'" (click)="viewMode = 'map'">Map View</a>
@@ -35,13 +35,23 @@
   <li class="nav-item">
     <a class="nav-link" [class.active]="viewMode == 'list'" (click)="viewMode = 'list'">List View</a>
   </li>
+  <li class="nav-item">
+    <a class="nav-link" [class.active]="viewMode == 'movie'" (click)="viewMode = 'movie'">Favorite Movies</a>
+  </li>
 </ul>
 
 <div [ngSwitch]="viewMode">
   <div *ngSwitchCase="'map'">Map View Content</div>
   <div *ngSwitchCase="'list'">List View Content</div>
+  <div *ngSwitchCase="'movie'">
+    <ul>
+      <li *ngFor="let movie of movies">
+        {{ movie }}
+      </li>
+    </ul>
+  </div>
   <div *ngSwitchDefault>Default View</div>
-</div> -->
+</div>
 
 <!-- <h4>*ngFor</h4>
 <button class="btn btn-primary" (click)="loadCourses()">Load Courses</button>
