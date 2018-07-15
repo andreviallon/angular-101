@@ -8,7 +8,7 @@ import { Component, OnInit } from '@angular/core';
 export class ContactFormComponent implements OnInit {
   contactMethods = [
     { id: 1, name: 'Email' },
-    { id: 2, name: 'Phone' },
+    { id: 2, name: 'Phone' }
   ];
 
   submit(f) {
