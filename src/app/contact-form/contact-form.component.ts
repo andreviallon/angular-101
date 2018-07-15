@@ -7,7 +7,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ContactFormComponent implements OnInit {
   submit(f) {
-    console.log(f.value.firstName;
+    console.log(f.value.firstName);
     console.log(f.value.comment);
   }
   constructor() { }
