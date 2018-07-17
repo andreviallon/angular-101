@@ -1,5 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { PostService } from '../services/post.service';
+import { AppError } from '../common/app-error';
+import { NotFoundError } from '../common/not-found-error';
+import { BadInput } from '../common/bad-input';
 
 @Component({
   selector: 'app-posts',
@@ -8,6 +11,7 @@ import { PostService } from '../services/post.service';
 })
 export class PostsComponent implements OnInit {
   posts = [];
+  form: any;
 
   constructor(private service: PostService) { }
 
@@ -22,8 +26,12 @@ export class PostsComponent implements OnInit {
           this.posts.splice(0, 0, post);
           console.log(response.json());
         },
-        error => {
-          alert('An unexpected error occured.');
+        (error: AppError) => {
+          if (error instanceof BadInput) {
+            this.form.setErrors(error.originalError);
+          } else {
+            alert('An unexpected error occured.');
+          }
         });
   }
 
@@ -39,14 +47,19 @@ export class PostsComponent implements OnInit {
   }
 
   deletePost(post) {
-    this.service.deletePost(post.id)
+    this.service.deletePost(333)
       .subscribe(
         response => {
           const index = this.posts.indexOf(post);
           this.posts.splice(index, 1);
         },
-        error => {
-          alert('An unexpected error occured.');
+        (error: AppError) => {
+          if (error instanceof NotFoundError) {
+            alert('This post has already been deleted');
+          } else {
+            alert('An unexpected error occured.');
+            console.log(error);
+          }
         });
   }
 
