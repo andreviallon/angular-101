@@ -5,6 +5,7 @@ import 'rxjs/add/operator/catch';
 import { AppError } from '../common/app-error';
 import { NotFoundError } from '../common/not-found-error';
 import { BadInput } from '../common/bad-input';
+import 'rxjs/add/observable/throw';
 
 @Injectable()
 export class PostService {
