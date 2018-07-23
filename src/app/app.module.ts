@@ -86,7 +86,7 @@ import { NavbarComponent } from './navbar/navbar.component';
         component: GithubFollowersComponent
       },
       {
-        path: 'post',
+        path: 'posts',
         component: PostsComponent
       },
       {
