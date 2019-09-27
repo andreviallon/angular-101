@@ -2,6 +2,10 @@
 
 ## What did I learn?
 
+* Setup and Angular Project
+* Angular CLI
+* Angular Directives
+* Observables
 * Routing
 * Reactive Form
 * HTTP CRUD
